@@ -1,7 +1,11 @@
 package br.ufmg.dcc.labsoft.refactoringanalyzer;
 
-public interface GitService {
+import java.net.UnknownHostException;
 
-	void cloneIfNotExists(String folder, String cloneUrl);
+import org.eclipse.jgit.api.errors.JGitInternalException;
+
+public interface GitService{
+
+	void cloneIfNotExists(String folder, String cloneUrl)  throws UnknownHostException, JGitInternalException;
 
 }

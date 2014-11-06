@@ -11,15 +11,21 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 
+import br.ufmg.dcc.labsoft.refactoringanalyzer.dao.CrudProjectDaoGit;
+import br.ufmg.dcc.labsoft.refactoringanalyzer.dao.ProjectGit;
+
 public class TestRevisionsDiff {
+	
+	private static CrudProjectDaoGit crud = new CrudProjectDaoGit();
 
 	@Test
 	public void testRevisionsDiff() throws Exception {
 		GitService gitService = new GitServiceImpl();
-		gitService.cloneIfNotExists("tmp/refactoring-toy-example", "https://github.com/danilofes/refactoring-toy-example.git");
+		List<ProjectGit> projetoList = crud.getProjects();
+		gitService.cloneIfNotExists("D:\\dirgithub2\\junit", "https://github.com/junit-team/junit.git");
 		
 		final List<String> found = new ArrayList<String>();
-		RefactoringDetector detector = new RefactoringDetectorImpl("tmp/refactoring-toy-example", new RefactoringHandler(){
+		RefactoringDetector detector = new RefactoringDetectorImpl(projetoList.get(0), new RefactoringHandler(){
 			@Override
 			public void handleRefactoring(Revision revision, Refactoring refactoring) {
 				found.add(revision.getId() + " " + refactoring.toString());
