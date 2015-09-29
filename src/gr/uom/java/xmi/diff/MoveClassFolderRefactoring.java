@@ -1,6 +1,7 @@
 package gr.uom.java.xmi.diff;
 
 public class MoveClassFolderRefactoring implements Refactoring {
+	private static final long serialVersionUID = -457060097433677284L;
 	private String className;
 	private String originalPath;
 	private String movedPath;

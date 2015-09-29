@@ -3,6 +3,7 @@ package gr.uom.java.xmi.diff;
 import gr.uom.java.xmi.UMLOperation;
 
 public class InlineOperationRefactoring implements Refactoring {
+	private static final long serialVersionUID = 203510621732413690L;
 	private UMLOperation inlinedOperation;
 	private UMLOperation inlinedToOperation;
 	private String sourceClassName;

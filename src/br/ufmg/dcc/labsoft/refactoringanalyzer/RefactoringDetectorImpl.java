@@ -6,8 +6,6 @@ import gr.uom.java.xmi.diff.Refactoring;
 import gr.uom.java.xmi.diff.RefactoringType;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -28,12 +26,6 @@ public class RefactoringDetectorImpl implements RefactoringDetector {
 	Logger logger = LoggerFactory.getLogger(RefactoringDetectorImpl.class);
 	private boolean analyzeMethodInvocations;
 	private Set<RefactoringType> refactoringTypesToConsider = null;
-	
-	private static final OutputStream NULL_OUTPUT_STREAM = new OutputStream() {
-		@Override
-		public void write(int b) throws IOException {
-		}
-	};
 	
 	public RefactoringDetectorImpl() {
 		this(false);
@@ -57,6 +49,10 @@ public class RefactoringDetectorImpl implements RefactoringDetector {
 			RefactoringType.EXTRACT_INTERFACE,
 			RefactoringType.EXTRACT_SUPERCLASS
 		);
+	}
+	
+	public boolean isAnalyzeMethodInvocations() {
+		return analyzeMethodInvocations;
 	}
 
 	public void setRefactoringTypesToConsider(RefactoringType ... types) {

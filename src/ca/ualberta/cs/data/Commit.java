@@ -7,6 +7,7 @@ import org.joda.time.DateTime;
 
 public class Commit implements Serializable {
 	
+	private static final long serialVersionUID = -1252600888846185515L;
 	private String revision;
 	private DateTime date;
 	private String author;

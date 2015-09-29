@@ -6,6 +6,8 @@ import java.util.Set;
 
 public class ChangeSet implements Serializable {
 	
+	private static final long serialVersionUID = 7363713908739003710L;
+
 	private Set<FileChange> fileChangeSet;
 
 	public ChangeSet() {

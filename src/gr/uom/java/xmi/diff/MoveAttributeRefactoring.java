@@ -3,6 +3,7 @@ package gr.uom.java.xmi.diff;
 import gr.uom.java.xmi.UMLAttribute;
 
 public class MoveAttributeRefactoring implements Refactoring {
+	private static final long serialVersionUID = -6789932785315848736L;
 	protected UMLAttribute movedAttribute;
 	protected String sourceClassName;
 	protected String targetClassName;

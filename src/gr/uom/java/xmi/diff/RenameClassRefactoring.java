@@ -1,6 +1,7 @@
 package gr.uom.java.xmi.diff;
 
 public class RenameClassRefactoring implements Refactoring {
+	private static final long serialVersionUID = -2846336648223034992L;
 	private String originalClassName;
 	private String renamedClassName;
 	

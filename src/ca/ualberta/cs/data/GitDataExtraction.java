@@ -195,10 +195,8 @@ public class GitDataExtraction extends AbstractDataExtraction {
 								}
 								//------------------------------------------------------
 								Map<String, Integer> refactoringCountMap = new LinkedHashMap<String, Integer>();
-								int refactoringCount = 0;
 								for(Refactoring refactoring : refactorings) {
 									//if(!refactoring.toString().contains("junit.tests.")) {
-										refactoringCount++;
 										System.out.println(refactoring.toString());
 										if(refactoringCountMap.containsKey(refactoring.getName())) {
 											refactoringCountMap.put(refactoring.getName(), refactoringCountMap.get(refactoring.getName()) + 1);

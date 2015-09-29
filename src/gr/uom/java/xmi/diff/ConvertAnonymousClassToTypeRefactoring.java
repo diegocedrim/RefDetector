@@ -4,6 +4,7 @@ import gr.uom.java.xmi.UMLAnonymousClass;
 import gr.uom.java.xmi.UMLClass;
 
 public class ConvertAnonymousClassToTypeRefactoring implements Refactoring {
+	private static final long serialVersionUID = 3782426844601994815L;
 	private UMLAnonymousClass anonymousClass;
 	private UMLClass addedClass;
 	

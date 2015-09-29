@@ -3,6 +3,7 @@ package gr.uom.java.xmi.diff;
 import gr.uom.java.xmi.decomposition.UMLOperationBodyMapper;
 
 public class MergeOperation implements Refactoring {
+	private static final long serialVersionUID = -8253229601851439314L;
 	private UMLOperationBodyMapper mapper;
 	
 	public MergeOperation(UMLOperationBodyMapper mapper) {

@@ -3,6 +3,7 @@ package gr.uom.java.xmi.diff;
 import gr.uom.java.xmi.UMLOperation;
 
 public class RenameOperationRefactoring implements Refactoring {
+	private static final long serialVersionUID = 6200168633137076942L;
 	private UMLOperation originalOperation;
 	private UMLOperation renamedOperation;
 	

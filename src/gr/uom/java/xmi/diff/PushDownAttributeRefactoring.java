@@ -4,6 +4,8 @@ import gr.uom.java.xmi.UMLAttribute;
 
 public class PushDownAttributeRefactoring extends MoveAttributeRefactoring {
 
+	private static final long serialVersionUID = -479906492154055887L;
+
 	public PushDownAttributeRefactoring(UMLAttribute movedAttribute,
 			String sourceClassName, String targetClassName) {
 		super(movedAttribute, sourceClassName, targetClassName);

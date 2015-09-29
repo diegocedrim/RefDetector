@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Set;
 
 public class UMLOperation implements Comparable<UMLOperation>, Serializable {
+	private static final long serialVersionUID = -2948774725097468243L;
 	private String name;
 	private String xmiID;
 	private String visibility;

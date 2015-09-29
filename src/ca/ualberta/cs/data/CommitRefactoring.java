@@ -6,6 +6,7 @@ import java.util.List;
 
 public class CommitRefactoring extends Commit {
 	
+	private static final long serialVersionUID = 914710164976641205L;
 	private List<Refactoring> refactorings;
 	private List<ChangeSet> changesetList;
 	private List<String> parentList;

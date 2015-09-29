@@ -4,6 +4,8 @@ import gr.uom.java.xmi.UMLAttribute;
 
 public class PullUpAttributeRefactoring extends MoveAttributeRefactoring {
 
+	private static final long serialVersionUID = 6111925278233063975L;
+
 	public PullUpAttributeRefactoring(UMLAttribute movedAttribute,
 			String sourceClassName, String targetClassName) {
 		super(movedAttribute, sourceClassName, targetClassName);

@@ -5,6 +5,7 @@ import gr.uom.java.xmi.UMLClass;
 import java.util.Set;
 
 public class ExtractSuperclassRefactoring implements Refactoring {
+	private static final long serialVersionUID = 4134091010247883348L;
 	private UMLClass extractedClass;
 	private Set<String> subclassSet;
 	

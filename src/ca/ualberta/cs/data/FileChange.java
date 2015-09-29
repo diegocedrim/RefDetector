@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class FileChange implements Serializable {
 	 
+	private static final long serialVersionUID = -358180610954057312L;
 	private String fileName;
 	private ChangeType changeType;
 	private String newFile;

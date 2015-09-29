@@ -1,6 +1,7 @@
 package gr.uom.java.xmi.diff;
 
 public class MoveClassRefactoring implements Refactoring {
+	private static final long serialVersionUID = -2780120406340620873L;
 	private String originalClassName;
 	private String movedClassName;
 	

@@ -4,6 +4,7 @@ import gr.uom.java.xmi.MethodCall;
 import gr.uom.java.xmi.UMLOperation;
 
 public class IntroducePolymorphismRefactoring implements Refactoring {
+	private static final long serialVersionUID = 7104345607192110031L;
 	private String clientClass;
 	private String supplierClass;
 	private MethodCall methodCall;

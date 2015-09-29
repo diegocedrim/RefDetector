@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 public abstract class AccessedMember implements Comparable<AccessedMember>, Serializable {
 
+	private static final long serialVersionUID = 4813556599442939482L;
+
 	public int compareTo(AccessedMember o) {
 		if(this instanceof MethodCall && o instanceof MethodCall) {
 			MethodCall mc1 = (MethodCall)this;
