@@ -32,5 +32,17 @@ public class MoveOperationRefactoring implements Refactoring {
 	public RefactoringType getRefactoringType() {
 		return RefactoringType.MOVE_OPERATION;
 	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public UMLOperation getOriginalOperation() {
+		return originalOperation;
+	}
+
+	public UMLOperation getMovedOperation() {
+		return movedOperation;
+	}
 	
 }

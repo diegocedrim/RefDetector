@@ -26,4 +26,17 @@ public class RenameClassRefactoring implements Refactoring {
 	public RefactoringType getRefactoringType() {
 		return RefactoringType.RENAME_CLASS;
 	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public String getOriginalClassName() {
+		return originalClassName;
+	}
+
+	public String getRenamedClassName() {
+		return renamedClassName;
+	}
+	
 }

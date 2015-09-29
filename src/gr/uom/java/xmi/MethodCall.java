@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MethodCall extends AccessedMember {
+	private static final long serialVersionUID = 8738430629724562899L;
 	private String originClassName;
 	private String methodName;
     private UMLType returnType;
@@ -113,4 +114,14 @@ public class MethodCall extends AccessedMember {
     	}
     	return hashCode;
     }
+
+	public List<UMLType> getParameterTypeList() {
+		return parameterTypeList;
+	}
+
+	public boolean isConstructorCall() {
+		return isConstructorCall;
+	}
+    
+	
 }

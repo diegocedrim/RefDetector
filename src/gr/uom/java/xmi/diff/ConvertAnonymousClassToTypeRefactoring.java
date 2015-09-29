@@ -30,4 +30,20 @@ public class ConvertAnonymousClassToTypeRefactoring implements Refactoring {
 		return RefactoringType.CONVERT_ANONYMOUS_CLASS_TO_TYPE;
 	}
 
+	public UMLAnonymousClass getAnonymousClass() {
+		return anonymousClass;
+	}
+
+	public void setAnonymousClass(UMLAnonymousClass anonymousClass) {
+		this.anonymousClass = anonymousClass;
+	}
+
+	public UMLClass getAddedClass() {
+		return addedClass;
+	}
+
+	public void setAddedClass(UMLClass addedClass) {
+		this.addedClass = addedClass;
+	}
+
 }

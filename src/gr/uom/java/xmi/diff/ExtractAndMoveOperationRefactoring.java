@@ -42,4 +42,5 @@ public class ExtractAndMoveOperationRefactoring implements Refactoring {
 		return extractedFromOperation;
 	}
 	
+	
 }

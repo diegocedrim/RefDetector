@@ -40,5 +40,9 @@ public class ExtractOperationRefactoring implements Refactoring {
 	public RefactoringType getRefactoringType() {
 		return RefactoringType.EXTRACT_OPERATION;
 	}
+
+	public String getSourceClassName() {
+		return sourceClassName;
+	}
 	
 }

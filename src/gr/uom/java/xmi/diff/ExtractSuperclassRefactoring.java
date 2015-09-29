@@ -33,5 +33,15 @@ public class ExtractSuperclassRefactoring implements Refactoring {
 		else
 			return RefactoringType.EXTRACT_SUPERCLASS;
 	}
+
+	public UMLClass getExtractedClass() {
+		return extractedClass;
+	}
+
+	public Set<String> getSubclassSet() {
+		return subclassSet;
+	}
+	
+	
 	
 }

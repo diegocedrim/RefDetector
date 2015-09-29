@@ -29,4 +29,5 @@ public class MergeOperation implements Refactoring {
 		return RefactoringType.MERGE_OPERATION;
 	}
 	
+	
 }

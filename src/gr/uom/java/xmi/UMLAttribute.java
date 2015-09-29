@@ -5,6 +5,7 @@ import gr.uom.java.xmi.diff.StringDistance;
 import java.io.Serializable;
 
 public class UMLAttribute implements Comparable<UMLAttribute>, Serializable {
+	private static final long serialVersionUID = -7525292666423957174L;
 	private String name;
 	private UMLType type;
 	private String visibility;
@@ -117,4 +118,6 @@ public class UMLAttribute implements Comparable<UMLAttribute>, Serializable {
 		double normalized = (double)distance/(double)Math.max(s1.length(), s2.length());
 		return normalized;
 	}
+	
+	
 }

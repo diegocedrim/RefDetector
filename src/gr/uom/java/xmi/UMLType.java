@@ -3,7 +3,8 @@ package gr.uom.java.xmi;
 import java.io.Serializable;
 
 public class UMLType implements Serializable {
-    private String classType;
+	private static final long serialVersionUID = 2282427419579376251L;
+	private String classType;
     private String genericType;
     private int arrayDimension;
     private volatile int hashCode = 0;
@@ -100,4 +101,6 @@ public class UMLType implements Serializable {
 		typeObject.setArrayDimension(arrayDimension);
 		return typeObject;
 	}
+	
+	
 }

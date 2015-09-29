@@ -26,4 +26,16 @@ public class MoveClassRefactoring implements Refactoring {
 	public RefactoringType getRefactoringType() {
 		return RefactoringType.MOVE_CLASS;
 	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public String getOriginalClassName() {
+		return originalClassName;
+	}
+
+	public String getMovedClassName() {
+		return movedClassName;
+	}
 }

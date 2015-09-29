@@ -30,4 +30,16 @@ public class RenameOperationRefactoring implements Refactoring {
 		return RefactoringType.RENAME_METHOD;
 	}
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public UMLOperation getOriginalOperation() {
+		return originalOperation;
+	}
+
+	public UMLOperation getRenamedOperation() {
+		return renamedOperation;
+	}
+	
 }

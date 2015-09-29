@@ -34,4 +34,20 @@ public class MoveAttributeRefactoring implements Refactoring {
 		return RefactoringType.MOVE_ATTRIBUTE;
 	}
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public UMLAttribute getMovedAttribute() {
+		return movedAttribute;
+	}
+
+	public String getSourceClassName() {
+		return sourceClassName;
+	}
+
+	public String getTargetClassName() {
+		return targetClassName;
+	}
+	
 }

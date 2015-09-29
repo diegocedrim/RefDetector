@@ -244,4 +244,10 @@ public class UMLOperation implements Comparable<UMLOperation>, Serializable {
 		double normalized = (double)distance/(double)Math.max(s1.length(), s2.length());
 		return normalized;
 	}
+
+	public OperationBody getOperationBody() {
+		return operationBody;
+	}
+	
+	
 }

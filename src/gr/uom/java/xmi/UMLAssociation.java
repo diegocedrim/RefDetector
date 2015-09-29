@@ -53,4 +53,5 @@ public class UMLAssociation implements Comparable<UMLAssociation> {
 	public int compareTo(UMLAssociation association) {
 		return this.toString().compareTo(association.toString());
 	}
+	
 }

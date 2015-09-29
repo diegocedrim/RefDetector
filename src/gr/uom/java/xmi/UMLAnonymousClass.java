@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UMLAnonymousClass implements Comparable<UMLAnonymousClass>, Serializable {
+	private static final long serialVersionUID = -9069124689708967242L;
 	private String packageName;
     private String name;
     private String sourceFile;
@@ -67,4 +68,15 @@ public class UMLAnonymousClass implements Comparable<UMLAnonymousClass>, Seriali
 	public int compareTo(UMLAnonymousClass umlClass) {
 		return this.toString().compareTo(umlClass.toString());
 	}
+
+	public String getPackageName() {
+		return packageName;
+	}
+
+	public String getSourceFile() {
+		return sourceFile;
+	}
+	
+	
+	
 }

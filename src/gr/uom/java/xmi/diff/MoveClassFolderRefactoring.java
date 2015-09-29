@@ -48,5 +48,20 @@ public class MoveClassFolderRefactoring implements Refactoring {
 		}
 		return separatorPos;
 	}
-	
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public String getClassName() {
+		return className;
+	}
+
+	public String getOriginalPath() {
+		return originalPath;
+	}
+
+	public String getMovedPath() {
+		return movedPath;
+	}
 }

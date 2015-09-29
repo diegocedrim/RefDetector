@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 public class UMLClass implements Comparable<UMLClass>, Serializable {
+	private static final long serialVersionUID = 5838993462951991786L;
 	private String packageName;
     private String name;
     private String qualifiedName;
@@ -367,5 +368,13 @@ public class UMLClass implements Comparable<UMLClass>, Serializable {
 		int distance = StringDistance.editDistance(s1, s2);
 		double normalized = (double)distance/(double)Math.max(s1.length(), s2.length());
 		return normalized;
+	}
+
+	public String getPackageName() {
+		return packageName;
+	}
+
+	public String getQualifiedName() {
+		return qualifiedName;
 	}
 }

@@ -81,4 +81,6 @@ public class UMLActor implements Comparable<UMLActor> {
 	public int compareTo(UMLActor umlActor) {
 		return this.toString().compareTo(umlActor.toString());
 	}
+	
+	
 }

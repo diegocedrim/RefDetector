@@ -35,4 +35,22 @@ public class IntroducePolymorphismRefactoring implements Refactoring {
 	public RefactoringType getRefactoringType() {
 		return RefactoringType.INTRODUCE_POLYMORPHISM;
 	}
+
+	public String getClientClass() {
+		return clientClass;
+	}
+
+	public String getSupplierClass() {
+		return supplierClass;
+	}
+
+	public MethodCall getMethodCall() {
+		return methodCall;
+	}
+
+	public UMLOperation getInvokingOperation() {
+		return invokingOperation;
+	}
+	
+	
 }
