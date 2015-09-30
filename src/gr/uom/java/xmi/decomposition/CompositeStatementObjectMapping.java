@@ -13,7 +13,6 @@ public class CompositeStatementObjectMapping extends AbstractCodeMapping impleme
 		this.compositeChildMatchingScore = score;
 	}
 
-	@Override
 	public int compareTo(CompositeStatementObjectMapping o) {
 		double distance1;
 		double distance2;

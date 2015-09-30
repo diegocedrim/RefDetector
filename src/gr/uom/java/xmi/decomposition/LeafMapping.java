@@ -10,7 +10,6 @@ public class LeafMapping extends AbstractCodeMapping implements Comparable<LeafM
 		super(statement1, statement2, operation1, operation2);
 	}
 
-	@Override
 	public int compareTo(LeafMapping o) {
 		double distance1;
 		double distance2;
