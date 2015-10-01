@@ -13,14 +13,26 @@ import java.util.TreeSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import br.ufmg.dcc.labsoft.util.serialization.JsonIgnore;
+
 public class UMLOperationBodyMapper implements Comparable<UMLOperationBodyMapper> {
 	private UMLOperation operation1;
 	private UMLOperation operation2;
 	private boolean isInitialized = true;
+	
+	@JsonIgnore
 	private List<AbstractCodeMapping> mappings;
+	
+	@JsonIgnore
 	private List<StatementObject> nonMappedLeavesT1;
+	
+	@JsonIgnore
 	private List<StatementObject> nonMappedLeavesT2;
+	
+	@JsonIgnore
 	private List<CompositeStatementObject> nonMappedInnerNodesT1;
+	
+	@JsonIgnore
 	private List<CompositeStatementObject> nonMappedInnerNodesT2;
 	
 	public UMLOperationBodyMapper(UMLOperation operation1, UMLOperation operation2) {

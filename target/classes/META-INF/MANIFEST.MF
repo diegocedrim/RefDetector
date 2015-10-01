@@ -1,5 +1,27 @@
 Manifest-Version: 1.0
 Built-By: diego
 Build-Jdk: 1.7.0_51
+Class-Path: lib/org.eclipse.jgit-1.3.0.201202151440-r.jar lib/jsch-0.1
+ .44-1.jar lib/asm-3.3.1.jar lib/asm-tree-3.3.1.jar lib/asm-util-3.3.1
+ .jar lib/commons-io-2.0.1.jar lib/commons-lang3-3.3.2.jar lib/joda-ti
+ me-2.1.jar lib/svnkit-1.3.5.jar lib/jna-3.2.3.jar lib/trilead-ssh2-bu
+ ild213-svnkit-1.3-patch.jar lib/sqljet-1.0.4.jar lib/antlr-runtime-3.
+ 1.3.jar lib/stringtemplate-3.2.jar lib/jdom-1.1.3.jar lib/org.eclipse
+ .egit.github.core-2.1.5.jar lib/jcabi-github-0.17.jar lib/jcabi-aspec
+ ts-0.18.jar lib/jcabi-immutable-1.3.jar lib/jcabi-xml-0.12.1.jar lib/
+ jcabi-http-1.8.3.jar lib/xembly-0.17.jar lib/jcabi-manifests-1.0.4.ja
+ r lib/jcabi-log-0.14.3.jar lib/hamcrest-library-1.3.jar lib/hamcrest-
+ core-1.3.jar lib/validation-api-1.1.0.Final.jar lib/aspectjrt-1.8.2.j
+ ar lib/javax.json-1.0.4.jar lib/jersey-client-1.18.1.jar lib/jersey-c
+ ore-1.18.1.jar lib/httpcore-4.3.jar lib/httpclient-4.3.jar lib/common
+ s-logging-1.1.3.jar lib/commons-codec-1.6.jar lib/hibernate-entityman
+ ager-4.2.6.Final.jar lib/jboss-logging-3.1.0.GA.jar lib/dom4j-1.6.1.j
+ ar lib/jboss-transaction-api_1.1_spec-1.0.1.Final.jar lib/hibernate-j
+ pa-2.0-api-1.0.1.Final.jar lib/hibernate-core-4.2.6.Final.jar lib/ant
+ lr-2.7.7.jar lib/hibernate-commons-annotations-4.0.2.Final.jar lib/ja
+ vassist-3.15.0-GA.jar lib/mysql-connector-java-5.1.34.jar lib/slf4j-l
+ og4j12-1.7.7.jar lib/slf4j-api-1.7.7.jar lib/log4j-1.2.17.jar lib/jun
+ it-4.11.jar lib/gson-2.3.1.jar
+Main-Class: RefDetectorConsole
 Created-By: Maven Integration for Eclipse
 

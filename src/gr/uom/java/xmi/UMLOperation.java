@@ -9,6 +9,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
+import br.ufmg.dcc.labsoft.util.serialization.JsonIgnore;
+
 public class UMLOperation implements Comparable<UMLOperation>, Serializable {
 	private static final long serialVersionUID = -2948774725097468243L;
 	private String name;
@@ -17,11 +19,15 @@ public class UMLOperation implements Comparable<UMLOperation>, Serializable {
 	private boolean isAbstract;
 	private List<UMLParameter> parameters;
 	private String className;
+	
+	@JsonIgnore
 	private Set<AccessedMember> accessedMembers;
 	private boolean isConstructor;
 	private boolean isFinal;
 	private boolean isStatic;
 	private boolean emptyBody;
+	
+	@JsonIgnore
 	private OperationBody operationBody;
 	
 	public UMLOperation(String name, String xmiID) {

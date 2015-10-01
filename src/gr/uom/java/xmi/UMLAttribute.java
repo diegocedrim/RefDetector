@@ -4,6 +4,8 @@ import gr.uom.java.xmi.diff.StringDistance;
 
 import java.io.Serializable;
 
+import br.ufmg.dcc.labsoft.util.serialization.JsonIgnore;
+
 public class UMLAttribute implements Comparable<UMLAttribute>, Serializable {
 	private static final long serialVersionUID = -7525292666423957174L;
 	private String name;
@@ -12,6 +14,8 @@ public class UMLAttribute implements Comparable<UMLAttribute>, Serializable {
 	private String className;
 	private boolean isFinal;
 	private boolean isStatic;
+	
+	@JsonIgnore
 	private Object value;
 
 	public UMLAttribute(String name, UMLType type) {

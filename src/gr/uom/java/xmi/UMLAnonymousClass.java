@@ -4,13 +4,18 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.ufmg.dcc.labsoft.util.serialization.JsonIgnore;
+
 public class UMLAnonymousClass implements Comparable<UMLAnonymousClass>, Serializable {
 	private static final long serialVersionUID = -9069124689708967242L;
 	private String packageName;
     private String name;
     private String sourceFile;
     
+    @JsonIgnore
     private List<UMLOperation> operations;
+    
+    @JsonIgnore
     private List<UMLAttribute> attributes;
     
     public UMLAnonymousClass(String packageName, String name) {

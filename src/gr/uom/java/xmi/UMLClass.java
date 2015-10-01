@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 
+import br.ufmg.dcc.labsoft.util.serialization.JsonIgnore;
+
 public class UMLClass implements Comparable<UMLClass>, Serializable {
 	private static final long serialVersionUID = 5838993462951991786L;
 	private String packageName;
@@ -20,8 +22,14 @@ public class UMLClass implements Comparable<UMLClass>, Serializable {
 	private boolean isAbstract;
 	private boolean isInterface;
 	private boolean topLevel;
+
+	@JsonIgnore
     private List<UMLOperation> operations;
+	
+	@JsonIgnore
     private List<UMLAttribute> attributes;
+	
+	@JsonIgnore
     private UMLType superclass;
 
     public UMLClass(String packageName, String name, String xmiID, boolean topLevel) {
