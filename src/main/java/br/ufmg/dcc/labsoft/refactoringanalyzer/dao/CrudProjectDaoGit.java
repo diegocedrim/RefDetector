@@ -69,7 +69,7 @@ public class CrudProjectDaoGit<T extends AbstractEntity> {
 			        t = t.getCause();
 			    }
 			    if (t instanceof ConstraintViolationException) {
-			    	System.out.println("Operação já foi incluida!!!");
+			    	System.out.println("Operaï¿½ï¿½o jï¿½ foi incluida!!!");
 					e.printStackTrace();
 			    }else{
 			    	System.out.println("Exception: ");
