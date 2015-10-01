@@ -203,7 +203,7 @@
 						<manifest>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>RefDetectorConsole</mainClass>
+							<mainClass>br.ufmg.dcc.labsoft.runners.RefDetectorConsole</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

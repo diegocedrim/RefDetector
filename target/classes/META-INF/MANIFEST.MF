@@ -31,6 +31,6 @@ Class-Path: lib/org.eclipse.jgit-1.3.0.201202151440-r.jar lib/jsch-0.1
  ox.preferences-3.4.1.jar lib/org.eclipse.equinox.registry-3.5.101.jar
   lib/org.eclipse.jdt.core-3.10.0.jar lib/org.eclipse.osgi-3.8.0.v2012
  0529-1548.jar lib/org.eclipse.text-3.5.101.jar
-Main-Class: RefDetectorConsole
+Main-Class: br.ufmg.dcc.labsoft.runners.RefDetectorConsole
 Created-By: Maven Integration for Eclipse
 

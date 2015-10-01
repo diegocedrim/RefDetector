@@ -1,3 +1,4 @@
+package br.ufmg.dcc.labsoft.runners;
 import gr.uom.java.xmi.ASTReader;
 import gr.uom.java.xmi.UMLModel;
 import gr.uom.java.xmi.diff.CommitRefactorings;
