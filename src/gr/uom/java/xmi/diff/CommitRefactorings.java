@@ -14,11 +14,14 @@ public class CommitRefactorings {
 	
 	private String commitHashTo;
 	
+	private Integer refactoringCount;
+	
 	private List<Refactoring> refactorings;
 	
 	public CommitRefactorings(List<Refactoring> refactorings) {
 		super();
 		this.refactorings = refactorings;
+		this.setRefactoringCount(refactorings.size());
 	}
 	
 	public CommitRefactorings() {
@@ -30,6 +33,7 @@ public class CommitRefactorings {
 	}
 
 	public void setRefactorings(List<Refactoring> refactorings) {
+		this.setRefactoringCount(refactorings.size());
 		this.refactorings = refactorings;
 	}
 
@@ -60,6 +64,14 @@ public class CommitRefactorings {
 	public String toJsonString() {
 		Gson gson = GsonFactory.getInstance().create();
 		return gson.toJson(this);
+	}
+
+	public Integer getRefactoringCount() {
+		return refactoringCount;
+	}
+
+	public void setRefactoringCount(Integer refactoringCount) {
+		this.refactoringCount = refactoringCount;
 	}
 	
 }

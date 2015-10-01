@@ -10,6 +10,7 @@ import javax.tools.*;
 
 import org.codehaus.plexus.util.FileUtils;
 
+
 public class SourceCompiler {
 	private File directory;
 	private ArrayList<File> files = new ArrayList<File>();
