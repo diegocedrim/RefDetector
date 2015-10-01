@@ -14,13 +14,11 @@ public class TestWithRealInstancesRename {
 		test.project("https://github.com/junit-team/junit.git", "master").atCommit("1fcd990f60518c941a44bae2596392021614a20b").contains("Rename Method public childBlock(method FrameworkMethod) : Statement renamed to public methodBlock(method FrameworkMethod) : Statement in class org.junit.tests.experimental.theories.extendingwithstubs.StubbedTheories");
 		test.project("https://github.com/voldemort/voldemort.git", "master").atCommit("d06fcec37fb3f3d45ffbd3fe15eafce77ba64069").notContains("Rename Method public addAllStealMasterPartitions(values Iterable<? extends java.lang.Integer>) : Builder renamed to public clearRebalancePartitionInfo() : Builder in class voldemort.client.protocol.pb.InitiateRebalanceNodeRequest.Builder");
 		test.project("https://github.com/thinkaurelius/titan.git", "titan05").atCommit("c7712a21c768cdd9893d0f6b03b12fef720e5a2b").contains("Rename Method public writeObjectData(buffer WriteBuffer, attribute boolean[]) : void renamed to public write(buffer WriteBuffer, attribute boolean[]) : void in class com.thinkaurelius.titan.graphdb.database.serialize.attribute.BooleanArraySerializer");
-		  // Esse parece estar errado
-		  test.project("https://github.com/voldemort/voldemort.git", "master").atCommit("d24f295f897528431bcdf914e9b8919987252298").contains("Rename Method public setStoreToRODir(index int, value ROStoreVersionDirMap) : Builder renamed to public setStealerRoStoreToDir(index int, value ROStoreVersionDirMap) : Builder in class voldemort.client.protocol.pb.InitiateRebalanceNodeRequest.Builder");
+		// Esse parece estar errado
+		test.project("https://github.com/voldemort/voldemort.git", "master").atCommit("d24f295f897528431bcdf914e9b8919987252298").contains("Rename Method public setStoreToRODir(index int, value ROStoreVersionDirMap) : Builder renamed to public setStealerRoStoreToDir(index int, value ROStoreVersionDirMap) : Builder in class voldemort.client.protocol.pb.InitiateRebalanceNodeRequest.Builder");
 		test.project("https://github.com/junit-team/junit.git", "master").atCommit("0a2601045f101930d0ca7f31c53b416fafbbe7a7").contains("Rename Method public micros(nanos long) : long renamed to public toMicros(nanos long) : long in class org.junit.rules.TimeWatcher");
-		  // Método apenas com um return statement
-		  test.project("https://github.com/loopj/android-async-http.git", "master").atCommit("e8b4797212cb58a626c2264bc3e35fa35b0f3027").notContains("Rename Method public getIp() : String renamed to public getAcceptLanguage() : String in class com.loopj.android.http.sample.util.SampleJSON");
-		  // É realmente um rename, mas com um único statement
-		  test.project("https://github.com/netty/netty.git", "master").atCommit("392623749eaadbbb4169103480971fac0b635784").contains("Rename Method protected firstOut() : ChannelBufferHolder<Object> renamed to protected newOutboundBuffer() : ChannelBufferHolder<?> in class io.netty.channel.socket.oio.OioServerSocketChannel");
+		test.project("https://github.com/loopj/android-async-http.git", "master").atCommit("e8b4797212cb58a626c2264bc3e35fa35b0f3027").notContains("Rename Method public getIp() : String renamed to public getAcceptLanguage() : String in class com.loopj.android.http.sample.util.SampleJSON");
+		test.project("https://github.com/netty/netty.git", "master").atCommit("392623749eaadbbb4169103480971fac0b635784").contains("Rename Method protected firstOut() : ChannelBufferHolder<Object> renamed to protected newOutboundBuffer() : ChannelBufferHolder<?> in class io.netty.channel.socket.oio.OioServerSocketChannel");
 		test.project("https://github.com/voldemort/voldemort.git", "master").atCommit("d06fcec37fb3f3d45ffbd3fe15eafce77ba64069").notContains("Rename Method public addDeletePartitions(value int) : Builder renamed to public clearRebalancePartitionInfo() : Builder in class voldemort.client.protocol.pb.InitiateRebalanceNodeRequest.Builder");
 
 		// Renato
@@ -34,7 +32,7 @@ public class TestWithRealInstancesRename {
 		test.project("https://github.com/voldemort/voldemort.git", "master").atCommit("f085f188403b8083b0b05fbcf3d2b329bac2ace1").notContains("Rename Method public RebalanceClient(cluster Cluster, config RebalanceClientConfig) renamed to public RebalanceClient(bootstrapUrl String, maxParallelRebalancing int, config AdminClientConfig) in class voldemort.client.rebalance.RebalanceClient");
 		test.project("https://github.com/thinkaurelius/titan.git", "titan05").atCommit("6ef5e7d8b390cfc63a8dedc0dbbccb67517b7242").contains("Rename Method public getStartTime() : long renamed to public getStartTimeMicro() : long in class com.thinkaurelius.titan.diskstorage.log.ReadMarker");
 		test.project("https://github.com/junit-team/junit.git", "master").atCommit("04f4f3197084ad9ad7c050ce1a40d6f4421662f4").contains("Rename Method protected useReoadingTestSuiteLoader() : boolean renamed to protected useReloadingTestSuiteLoader() : boolean in class junit.runner.BaseTestRunner");
-		
+
 		test.assertExpectations();
 	}
 
