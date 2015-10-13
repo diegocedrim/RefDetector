@@ -782,7 +782,7 @@ public class UMLModelDiff {
       refactorings.addAll(identifyExtractSuperclassRefactorings());
       refactorings.addAll(getMoveClassRefactorings());
       refactorings.addAll(getRenameClassRefactorings());
-      refactorings.addAll(identifyConvertAnonymousClassToTypeRefactorings());
+//      refactorings.addAll(identifyConvertAnonymousClassToTypeRefactorings());
       
       for(UMLClassDiff classDiff : commonClassDiffList) {
          refactorings.addAll(classDiff.getRefactorings());
@@ -933,112 +933,4 @@ public class UMLModelDiff {
       classDiff.getAddedOperations().remove(operation);
    }
    
-// public String toString() {
-//    StringBuilder sb = new StringBuilder();
-//    if(!addedClasses.isEmpty() || !removedClasses.isEmpty() || !classMoveDiffList.isEmpty() || !classRenameDiffList.isEmpty())
-//       sb.append("--class level edits--").append("\n");
-//    Collections.sort(removedClasses);
-//    for(UMLClass umlClass : removedClasses) {
-//       sb.append("class " + umlClass + " removed").append("\n");
-//    }
-//    Collections.sort(addedClasses);
-//    for(UMLClass umlClass : addedClasses) {
-//       sb.append("class " + umlClass + " added").append("\n");
-//    }
-//    Collections.sort(classMoveDiffList);
-//    for(UMLClassMoveDiff classMoveDiff : classMoveDiffList) {
-//       sb.append(classMoveDiff);
-//    }
-//    Collections.sort(classRenameDiffList);
-//    for(UMLClassRenameDiff classRenameDiff : classRenameDiffList) {
-//       sb.append(classRenameDiff);
-//    }
-//    if(!addedGeneralizations.isEmpty() || !removedGeneralizations.isEmpty() || !generalizationDiffList.isEmpty())
-//       sb.append("--generalization edits--").append("\n");
-//    Collections.sort(removedGeneralizations);
-//    for(UMLGeneralization umlGeneralization : removedGeneralizations) {
-//       sb.append("generalization " + umlGeneralization + " removed").append("\n");
-//    }
-//    Collections.sort(addedGeneralizations);
-//    for(UMLGeneralization umlGeneralization : addedGeneralizations) {
-//       sb.append("generalization " + umlGeneralization + " added").append("\n");
-//    }
-//    Collections.sort(generalizationDiffList);
-//    for(UMLGeneralizationDiff generalizationDiff : generalizationDiffList) {
-//       sb.append(generalizationDiff);
-//    }
-////     if(!addedAssociations.isEmpty() || !removedAssociations.isEmpty())
-////        sb.append("--association edits--").append("\n");
-////     Collections.sort(removedAssociations);
-////     for(UMLAssociation umlAssociation : removedAssociations) {
-////        sb.append("association " + umlAssociation + " removed").append("\n");
-////     }
-////     Collections.sort(addedAssociations);
-////     for(UMLAssociation umlAssociation : addedAssociations) {
-////        sb.append("association " + umlAssociation + " added").append("\n");
-////     }
-////     if(!addedDependencies.isEmpty() || !removedDependencies.isEmpty())
-////        sb.append("--dependency edits--").append("\n");
-////     Collections.sort(removedDependencies);
-////     for(UMLDependency umlDependency : removedDependencies) {
-////        sb.append("dependency " + umlDependency + " removed").append("\n");
-////     }
-////     Collections.sort(addedDependencies);
-////     for(UMLDependency umlDependency : addedDependencies) {
-////        sb.append("dependency " + umlDependency + " added").append("\n");
-////     }
-//    if(!addedRealizations.isEmpty() || !removedRealizations.isEmpty() || !realizationDiffList.isEmpty())
-//       sb.append("--realization edits--").append("\n");
-//    Collections.sort(removedRealizations);
-//    for(UMLRealization umlRealization : removedRealizations) {
-//       sb.append("realization " + umlRealization + " removed").append("\n");
-//    }
-//    Collections.sort(addedRealizations);
-//    for(UMLRealization umlRealization : addedRealizations) {
-//       sb.append("realization " + umlRealization + " added").append("\n");
-//    }
-//    Collections.sort(realizationDiffList);
-//    for(UMLRealizationDiff realizationDiff : realizationDiffList) {
-//       sb.append(realizationDiff);
-//    }
-//    if(!commonClassDiffList.isEmpty())
-//       sb.append("--edits between common classes--").append("\n");
-//    Collections.sort(commonClassDiffList);
-//    for(UMLClassDiff classDiff : commonClassDiffList) {
-//       sb.append(classDiff);
-//    }
-////     if(!collaborationDiffList.isEmpty())
-////        sb.append("--edits between collaborations--").append("\n");
-////     for(UMLCollaborationDiff collaborationDiff : collaborationDiffList) {
-////        sb.append(collaborationDiff);
-////     }
-//    /*List<ExtractOperationRefactoring> extractOperationList = identifyExtractOperationRefactoringsWithoutSequenceDiagramInformation();
-//    List<MoveOperationRefactoring> moveOperationList = identifyMoveOperationRefactoringsWithoutSequenceDiagramInformation();
-//    List<MoveAttributeRefactoring> moveAttributeList = identifyMoveAttributeRefactoringsWithoutSequenceDiagramInformation();
-//    List<IntroducePolymorphismRefactoring> introducePolymorphismList = identifyIntroducePolymorphismRefactoringsWithoutSequenceDiagramInformation();
-//    List<ExtractSuperclassRefactoring> extractSuperclassList = identifyExtractSuperclassRefactorings();
-//    List<RenameClassRefactoring> renameClassList = getRenameClassRefactorings();
-//    if(!extractOperationList.isEmpty() || !moveOperationList.isEmpty() || !moveAttributeList.isEmpty() ||
-//          !introducePolymorphismList.isEmpty() || !extractSuperclassList.isEmpty() || !renameClassList.isEmpty())
-//       sb.append("--identified refactorings--").append("\n");
-//    for(ExtractOperationRefactoring extractOperation : extractOperationList) {
-//       sb.append(extractOperation).append("\n");
-//    }
-//    for(MoveOperationRefactoring moveOperation : moveOperationList) {
-//       sb.append(moveOperation).append("\n");
-//    }
-//    for(MoveAttributeRefactoring moveAttribute : moveAttributeList) {
-//       sb.append(moveAttribute).append("\n");
-//    }
-//    for(IntroducePolymorphismRefactoring introducePolymorphism : introducePolymorphismList) {
-//       sb.append(introducePolymorphism).append("\n");
-//    }
-//    for(ExtractSuperclassRefactoring extractSuperclass : extractSuperclassList) {
-//       sb.append(extractSuperclass).append("\n");
-//    }
-//    for(RenameClassRefactoring renameClass : renameClassList) {
-//       sb.append(renameClass).append("\n");
-//    }*/
-//    return sb.toString();
-// }
 }
