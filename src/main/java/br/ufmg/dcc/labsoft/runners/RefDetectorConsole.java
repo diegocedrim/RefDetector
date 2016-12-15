@@ -54,8 +54,9 @@ public class RefDetectorConsole {
 		return refactorings;
 	}
 	
-	public CommitRefactorings detectRefactorings(File oldVersionSourceFolder, File newVersionSourceFolder) throws IOException {
-		CommitRefactorings envelope = this.createFromGitSourceFolders(oldVersionSourceFolder, newVersionSourceFolder);
+	public CommitRefactorings detectRefactorings(File oldVersionSourceFolder, File newVersionSourceFolder,
+			File oldRepositoryCodeFolder, File newRepositoryCodeFolder) throws IOException {
+		CommitRefactorings envelope = this.createFromGitSourceFolders(oldRepositoryCodeFolder, newRepositoryCodeFolder);
 		UMLModel oldModel = new ASTReader(oldVersionSourceFolder).getUmlModel();
 		UMLModel newModel = new ASTReader(newVersionSourceFolder).getUmlModel();
 		UMLModelDiff modelDiff = oldModel.diff(newModel);
@@ -73,8 +74,11 @@ public class RefDetectorConsole {
 		try {
 			String oldCodeFolder = args[0];
 			String newCodeFolder = args[1];
+			String oldRepositoryCodeFolder = args[2];
+			String newRepositoryCodeFolder = args[3];
 			RefDetectorConsole detector = new RefDetectorConsole();
-			CommitRefactorings refactorings = detector.detectRefactorings(new File(oldCodeFolder), new File(newCodeFolder));
+			CommitRefactorings refactorings = detector.detectRefactorings(new File(oldCodeFolder), new File(newCodeFolder),
+					new File(oldRepositoryCodeFolder), new File(newRepositoryCodeFolder));
 			System.out.println(refactorings.toJsonString());
 		} catch (IOException e) {
 			e.printStackTrace();
